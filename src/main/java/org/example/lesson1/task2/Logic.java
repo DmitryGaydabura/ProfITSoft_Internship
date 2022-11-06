@@ -12,20 +12,10 @@ public class Logic {
         HashMap<String, Integer> count = new HashMap<>();
 
         //This loop splits our list, into separate lines of text
-        for (String value : list) {
+        for (String line : list) {
             //Creating set of hashtags in every line
             HashSet<String> hashtagsInLine = new HashSet<>();
-
-            //Splitting our words by " " separator
-            String[] line = value.split(" ");
-            for (String s : line) {
-                //checking whether our word starts with "#"
-                if (s.startsWith("#")) {
-                    //If true, adding this hashtag to our set
-                    hashtagsInLine.add(s);
-                }
-
-            }
+            findAllHashtagsInALine(line, hashtagsInLine);
 
             //checking, whether our hashtag was unique
             for (String s : hashtagsInLine) {
@@ -45,6 +35,37 @@ public class Logic {
         Set<String> allTags = count.keySet();
 
         //We only need top-5 hashtags
+        printTop5HashtagsFromHashMap(count, allTags);
+    }
+
+    /**
+     * We're splitting our line by " " separator, and then we're checking whether our word starts with "#" and if it does,
+     * we're adding it to our set
+     *
+     * @param value The line of text that we're currently processing
+     * @param hashtagsInLine This is a set of hashtags that we will be returning.
+     */
+    private static void findAllHashtagsInALine(String value, HashSet<String> hashtagsInLine) {
+        //Splitting our words by " " separator
+        String[] line = value.split(" ");
+        for (String s : line) {
+            //checking whether our word starts with "#"
+            if (s.startsWith("#")) {
+                //If true, adding this hashtag to our set
+                hashtagsInLine.add(s);
+            }
+
+        }
+    }
+
+    /**
+     * We iterate through the map and find the key with the highest value. We then print that key and value, and remove it
+     * from the map. We repeat this process 5 times
+     *
+     * @param count a HashMap that stores the hashtag as the key and the number of times it appears as the value
+     * @param allTags a set of all the hashtags in the file
+     */
+    private static void printTop5HashtagsFromHashMap(HashMap<String, Integer> count, Set<String> allTags) {
         for (int i = 0; i < 5; i++) {
 
             int max = 0;

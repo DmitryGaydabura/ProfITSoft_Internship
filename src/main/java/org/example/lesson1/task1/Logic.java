@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 public class Logic {
 
+    /**
+     * It asks the user to enter the length of the array, then it asks the user to enter the numbers of the array, and
+     * finally it returns the array
+     *
+     * @return An array of integers.
+     */
     public static int[] getInitialArrayFromUser() {
 
         //Determining the size of our initial array.
@@ -23,6 +29,12 @@ public class Logic {
         return array;
     }
 
+    /**
+     * It removes all negative numbers and zeroes from the array.
+     *
+     * @param array The array that we want to remove negative numbers and zeroes from.
+     * @return The method returns an array of positive numbers.
+     */
     public static int[] removeNegativeAndZeroFromArray(int[] array) {
         //We should determine the size of the array before creating it.
         //This for loop counts every positive number.
@@ -50,6 +62,13 @@ public class Logic {
         return arrayWithoutNegAndZero;
     }
 
+    /**
+     * For each element in the array, compare it to the element next to it and swap them if the element on the left is
+     * greater than the element on the right
+     *
+     * @param array the array to be sorted
+     * @return The sorted array is being returned.
+     */
     public static int[] bubbleSort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n - 1; i++)

@@ -1,5 +1,8 @@
 package org.example.lesson1.task3.figures;
 
+/**
+ * Cylinder is a subclass of a Figure.
+ */
 public class Cylinder extends Figure {
     int height;
     int baseRadius;

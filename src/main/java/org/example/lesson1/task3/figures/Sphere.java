@@ -1,5 +1,8 @@
 package org.example.lesson1.task3.figures;
 
+/**
+ * Sphere is a subclass of Figure.
+ */
 public class Sphere extends Figure {
 
     int radius;
