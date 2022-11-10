@@ -58,7 +58,7 @@ public class Logic {
      * @param list The list of figures to add the spheres to.
      * @param numberOfSpheres The number of spheres to add to the list.
      */
-    public static void addRandomSpheres(ArrayList<Figure> list, int numberOfSpheres) {
+    public static ArrayList<Figure>  addRandomSpheres(ArrayList<Figure> list, int numberOfSpheres) {
         if(list == null){
             throw new IllegalArgumentException("List should not be null");
         }
@@ -66,6 +66,7 @@ public class Logic {
             Sphere sphere = new Sphere((int) (Math.random() * 10) + 1);
             list.add(sphere);
         }
+        return list;
     }
 
     /**
@@ -74,7 +75,7 @@ public class Logic {
      * @param list the ArrayList of Figure objects
      * @param numberOfCylinders The number of cylinders to add to the list.
      */
-    public static void addRandomCylinders(ArrayList<Figure> list, int numberOfCylinders) {
+    public static ArrayList<Figure>  addRandomCylinders(ArrayList<Figure> list, int numberOfCylinders) {
         if(list == null){
             throw new IllegalArgumentException("List should not be null");
         }
@@ -82,6 +83,7 @@ public class Logic {
             Cylinder cylinder = new Cylinder((int) (Math.random() * 10) + 1, (int) (Math.random() * 10)+1);
             list.add(cylinder);
         }
+        return list;
     }
 
     /**
@@ -90,7 +92,7 @@ public class Logic {
      * @param list The list of figures to add the cubes to.
      * @param numberOfCubes The number of cubes to add to the list.
      */
-    public static void addRandomCubes(ArrayList<Figure> list, int numberOfCubes) {
+    public static ArrayList<Figure> addRandomCubes(ArrayList<Figure> list, int numberOfCubes) {
         if(list == null){
             throw new IllegalArgumentException("List should not be null");
         }
@@ -98,5 +100,14 @@ public class Logic {
             Cube cube = new Cube((int) (Math.random() * 10) + 1);
             list.add(cube);
         }
+
+        return list;
+    }
+
+    public static void printList(ArrayList<Figure> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(i+1 + ". " + list.get(i) );
+        }
+        System.out.println();
     }
 }

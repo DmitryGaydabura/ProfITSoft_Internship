@@ -21,15 +21,20 @@ public class Main {
         int numberOfSpheres = (int) (Math.random() * 10);
 
         // Adding random figures to the list.
-        Logic.addRandomCubes(list, numberOfCubes);
-        Logic.addRandomCylinders(list, numberOfCylinders);
-        Logic.addRandomSpheres(list, numberOfSpheres);
+        list = Logic.addRandomCubes(list, numberOfCubes);
+        list = Logic.addRandomCylinders(list, numberOfCylinders);
+        list = Logic.addRandomSpheres(list, numberOfSpheres);
+
+        //Printing the unsorted list.
+        System.out.println("Initial List:");
+        Logic.printList(list);
 
 
-        // Printing the unsorted list and then the sorted list.
-        System.out.println("Unsorted list:\n" + list + "\n");
+        // Printing the sorted list.
         ArrayList<Figure> sortedList = Logic.sortFigures(list);
-        System.out.println("Sorted list:\n" + sortedList);
+        System.out.println("Sorted List:");
+        Logic.printList(sortedList);
+
 
 
     }

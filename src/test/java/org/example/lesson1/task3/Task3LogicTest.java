@@ -1,4 +1,4 @@
-package lesson1.task3;
+package org.example.lesson1.task3;
 
 import org.example.lesson1.task3.Logic;
 import org.example.lesson1.task3.figures.Cube;
