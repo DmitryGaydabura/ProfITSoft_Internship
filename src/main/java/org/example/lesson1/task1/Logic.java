@@ -35,7 +35,10 @@ public class Logic {
      * @param array The array that we want to remove negative numbers and zeroes from.
      * @return The method returns an array of positive numbers.
      */
-    public static int[] removeNegativeAndZeroFromArray(int[] array) {
+    public static int[] removeNegAndZero(int[] array) {
+        if(array == null){
+            throw new IllegalArgumentException("Array should not be null");
+        }
         //We should determine the size of the array before creating it.
         //This for loop counts every positive number.
         int posNumbers = 0;
@@ -70,6 +73,10 @@ public class Logic {
      * @return The sorted array is being returned.
      */
     public static int[] bubbleSort(int[] array) {
+        if(array == null){
+            throw new IllegalArgumentException("Array should not be null");
+        }
+
         int n = array.length;
         for (int i = 0; i < n - 1; i++)
             for (int j = 0; j < n - i - 1; j++)

@@ -1,12 +1,14 @@
 package org.example.lesson1.task2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Logic {
-    public static void printTop5Hashtags(ArrayList<String> list) {
+    public static List<String> printTop5Hashtags(List<String> list) {
+
+        if(list == null){
+            throw new IllegalArgumentException("List should not be null");
+        }
+
         // Creating HashMap with our Hashtags as keys,
         // and number of appearance as value
         HashMap<String, Integer> count = new HashMap<>();
@@ -35,7 +37,7 @@ public class Logic {
         Set<String> allTags = count.keySet();
 
         //We only need top-5 hashtags
-        printTop5HashtagsFromHashMap(count, allTags);
+        return Top5HashtagsFromHashMap(count, allTags);
     }
 
     /**
@@ -65,7 +67,8 @@ public class Logic {
      * @param count a HashMap that stores the hashtag as the key and the number of times it appears as the value
      * @param allTags a set of all the hashtags in the file
      */
-    private static void printTop5HashtagsFromHashMap(HashMap<String, Integer> count, Set<String> allTags) {
+    private static List<String> Top5HashtagsFromHashMap(HashMap<String, Integer> count, Set<String> allTags) {
+        List<String> answer = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
 
             int max = 0;
@@ -85,6 +88,8 @@ public class Logic {
             count.remove(maxString);
             //Printing our max value in a nice format
             System.out.println((i + 1) + ". " + maxString + " (" + max + ")");
+            answer.add(maxString);
         }
+        return answer;
     }
 }

@@ -17,6 +17,12 @@ public class Logic {
      * @return ArrayList<Figure>
      */
     public static ArrayList<Figure> sortFigures(ArrayList<Figure> list) {
+
+        if(list == null){
+            throw new IllegalArgumentException("List should not be null");
+        }
+
+
         //Creating new ArrayList<Figure>
         ArrayList<Figure> sortedList = new ArrayList<>();
 
@@ -53,6 +59,9 @@ public class Logic {
      * @param numberOfSpheres The number of spheres to add to the list.
      */
     public static void addRandomSpheres(ArrayList<Figure> list, int numberOfSpheres) {
+        if(list == null){
+            throw new IllegalArgumentException("List should not be null");
+        }
         for (int i = 0; i < numberOfSpheres; i++) {
             Sphere sphere = new Sphere((int) (Math.random() * 10) + 1);
             list.add(sphere);
@@ -66,6 +75,9 @@ public class Logic {
      * @param numberOfCylinders The number of cylinders to add to the list.
      */
     public static void addRandomCylinders(ArrayList<Figure> list, int numberOfCylinders) {
+        if(list == null){
+            throw new IllegalArgumentException("List should not be null");
+        }
         for (int i = 0; i < numberOfCylinders; i++) {
             Cylinder cylinder = new Cylinder((int) (Math.random() * 10) + 1, (int) (Math.random() * 10)+1);
             list.add(cylinder);
@@ -79,6 +91,9 @@ public class Logic {
      * @param numberOfCubes The number of cubes to add to the list.
      */
     public static void addRandomCubes(ArrayList<Figure> list, int numberOfCubes) {
+        if(list == null){
+            throw new IllegalArgumentException("List should not be null");
+        }
         for (int i = 0; i < numberOfCubes; i++) {
             Cube cube = new Cube((int) (Math.random() * 10) + 1);
             list.add(cube);
