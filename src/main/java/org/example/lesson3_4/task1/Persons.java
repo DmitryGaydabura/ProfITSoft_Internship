@@ -20,7 +20,12 @@ public class Persons {
     // A regular expression that matches the surname tag.
     private final Pattern surnamePattern = Pattern.compile("surname\\s?=\\s?\"(?<surname>\\S+)\"", Pattern.MULTILINE | Pattern.COMMENTS);
 
-    // Parsing the input file and writing the changed file to the output path.
+    /**
+     * It takes an input file, parses it, and writes the parsed data to an output file
+     *
+     * @param inputFile The file to be parsed.
+     * @param outputPath The path to the output file.
+     */
     public void parseAndWriteChangedFile(File inputFile, String outputPath) {
         try (var fileInputStream = new FileInputStream(inputFile);
              var scanner = new Scanner(fileInputStream, StandardCharsets.UTF_8).useDelimiter("/>");
@@ -39,6 +44,12 @@ public class Persons {
         }
     }
 
+    /**
+     * It takes a line of text, finds the name and surname tags, and replaces them with a full name tag
+     *
+     * @param line The line of text that we're currently working on.
+     * @return The newline string is being returned.
+     */
     private String replaceNameTagsToFullName(String line) {
         Matcher nameMatcher = namePattern.matcher(line);
         Matcher surnameMatcher = surnamePattern.matcher(line);
