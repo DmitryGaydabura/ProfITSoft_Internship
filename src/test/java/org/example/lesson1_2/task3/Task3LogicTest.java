@@ -1,10 +1,9 @@
-package org.example.lesson1.task3;
+package org.example.lesson1_2.task3;
 
-import org.example.lesson1.task3.Logic;
-import org.example.lesson1.task3.figures.Cube;
-import org.example.lesson1.task3.figures.Cylinder;
-import org.example.lesson1.task3.figures.Figure;
-import org.example.lesson1.task3.figures.Sphere;
+import org.example.lesson1_2.task3.figures.Cube;
+import org.example.lesson1_2.task3.figures.Cylinder;
+import org.example.lesson1_2.task3.figures.Figure;
+import org.example.lesson1_2.task3.figures.Sphere;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

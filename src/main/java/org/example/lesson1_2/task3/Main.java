@@ -1,11 +1,11 @@
-package org.example.lesson1.task3;
+package org.example.lesson1_2.task3;
 
 //3. Реалізувати метод, який сортує геометричні 3d фігури за об'ємом.
 // Метод приймає параметром колекцію довільних геометричних фігур (куб, кулю, циліндр).
 // Написати unit-тести для методу.
 
 
-import org.example.lesson1.task3.figures.Figure;
+import org.example.lesson1_2.task3.figures.Figure;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,10 @@
-package org.example.lesson1.task1;
+package org.example.lesson1_2.task1;
 
-import org.example.lesson1.task1.Logic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.example.lesson1.task1.Logic.bubbleSort;
-import static org.example.lesson1.task1.Logic.removeNegAndZero;
+import static org.example.lesson1_2.task1.Logic.bubbleSort;
+import static org.example.lesson1_2.task1.Logic.removeNegAndZero;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Task1LogicTest {

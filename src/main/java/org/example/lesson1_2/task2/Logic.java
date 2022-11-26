@@ -1,4 +1,4 @@
-package org.example.lesson1.task2;
+package org.example.lesson1_2.task2;
 
 import java.util.*;
 

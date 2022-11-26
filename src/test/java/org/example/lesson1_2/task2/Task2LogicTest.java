@@ -1,6 +1,5 @@
-package org.example.lesson1.task2;
+package org.example.lesson1_2.task2;
 
-import org.example.lesson1.task2.Logic;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

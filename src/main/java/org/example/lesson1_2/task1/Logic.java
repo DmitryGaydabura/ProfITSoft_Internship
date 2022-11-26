@@ -1,4 +1,4 @@
-package org.example.lesson1.task1;
+package org.example.lesson1_2.task1;
 
 import java.util.Arrays;
 import java.util.Scanner;

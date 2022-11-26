@@ -1,4 +1,4 @@
-package org.example.lesson1.task3.figures;
+package org.example.lesson1_2.task3.figures;
 
 /**
  * Cube is a subclass of Figure.
